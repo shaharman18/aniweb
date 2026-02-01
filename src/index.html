@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link href="./output.css" rel="stylesheet" />
+
+  <title>Golf Hero Section</title>
+</head>
+
+<body class="font-[Montserrat] overflow-x-hidden">
+
+  <video class="fixed top-0 left-0 w-full h-full object-cover -z-20" src="./Assests/hero.mp4" autoplay muted loop
+    playsinline>
+  </video>
+
+  <div id="cursor"
+    class="w-40 h-40 rounded-full fixed top-5 bg-[#95c11e] left-6 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all blur-3xl duration-150 ease-out">
+  </div>
+
+  <div id="cursor-blur"
+    class="w-3 h-3 rounded-full fixed top-5 bg-[#95c11e] left-6 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out">
+  </div>
+
+  <div class="fixed top-0 left-0 w-full h-full bg-black/60 -z-10"></div>
+
+  <header id="navbar" class=" lg:flex fixed top-0 left-0 w-full z-99">
+    <div class="flex justify-between items-center gap-10 px-10 py-5 uppercase text-white font-semibold">
+
+      <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="Logo"
+        class="w-[75px]" />
+
+      <nav class=" hidden lg:flex gap-8 text-sm">
+        <a href="#" class="hover:text-green-400 duration-200">Toptracer Range</a>
+        <a href="#" class="hover:text-green-400 duration-200">Golf Lessons</a>
+        <a href="#" class="hover:text-green-400 duration-200">Adventure Golf</a>
+        <a href="#" class="hover:text-green-400 duration-200">Coffee Shop</a>
+        <a href="#" class="hover:text-green-400 duration-200">Leagues</a>
+      </nav>
+
+      <button onclick="handlemenu()" class="text-3xl lg:hidden text-white">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- mobile-menu -->
+
+
+
+  <div id="mobile-menu" class=" hidden lg:hidden px-10 py-5  fixed z-100 min-[80vh] inset-0 bg-black ">
+    <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="Logo" class=" w-[75px]" />
+    <button onclick="handlemenu()" class=" absolute top-7 right-9 text-white text-2xl">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <nav class="flex flex-col justify-center items-center pt-[200px] text-white gap-8 text-sm">
+      <a href="#" class="hover:text-green-400 duration-200">Toptracer Range</a>
+      <a href="#" class="hover:text-green-400 duration-200">Golf Lessons</a>
+      <a href="#" class="hover:text-green-400 duration-200">Adventure Golf</a>
+      <a href="#" class="hover:text-green-400 duration-200">Coffee Shop</a>
+      <a href="#" class="hover:text-green-400 duration-200">Leagues</a>
+    </nav>
+  </div>
+
+  <main id="hero" class="relative h-screen flex items-center justify-center text-white px-4">
+
+    <div class="max-w-5xl">
+
+      <h1 class="relative text-6xl md:text-8xl font-extrabold uppercase">
+
+        <span class="absolute top-[6px] left-[6px] text-[#95c11e] -z-20">
+          Eat. Drink. Play.
+        </span>
+
+        <span class="absolute top-[3px] left-[3px] text-black -z-10">
+          Eat. Drink. Play.
+        </span>
+
+        Eat. Drink. Play.
+
+      </h1>
+
+      <h2 class="text-2xl md:text-4xl font-bold mt-6">
+        Welcome to Sidcup Family Golf!
+      </h2>
+
+      <p class="text-base md:text-xl mt-4 text-gray-200 leading-relaxed">
+        Sidcup Family Golf is a multipurpose golf facility located in Sidcup,
+        South East London. Passionate about technology, player development, and
+        making golf fun and accessible to everyone.
+      </p>
+
+    </div>
+  </main>
+
+  <div id="page2" class="min-h-screen bg-black flex justify-center items-center flex-col">
+
+    <div id="scroller" class="relative z-50 text-transparent 
+           [-webkit-text-stroke:1px_green]
+           text-3xl sm:text-5xl lg:text-8xl
+           font-bold whitespace-nowrap
+           pt-10 flex overflow-hidden">
+
+      <div class="scroller-track flex flex-nowrap gap-x-8 sm:gap-x-16 lg:gap-x-20">
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">TOPTRACER RANGE</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">GOLF LESSONS</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">ADVENTURE GOLF</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">COFFEE SHOP</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">LEAGUES</h4>
+      </div>
+
+      <div class="scroller-track flex flex-nowrap gap-x-8 sm:gap-x-16 lg:gap-x-20">
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">TOPTRACER RANGE</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">GOLF LESSONS</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">ADVENTURE GOLF</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">COFFEE SHOP</h4>
+        <h4 class="transition-colors duration-700 hover:text-[#95c11e]">LEAGUES</h4>
+      </div>
+
+    </div>
+
+    <div class="text-3xl py-10 text-center sm:text-5xl lg:text-6xl font-extrabold">
+      <h3 class="text-white uppercase">about us</h3>
+    </div>
+
+    <section id="about-us" class="relative z-50 flex flex-col lg:flex-row items-center justify-center
+           min-h-[40vh] w-full
+           px-6 sm:px-10 lg:px-20
+           gap-10 lg:gap-16 text-white">
+
+      <img src="./Assests/page2-right.avif" alt="" class="w-[220px] sm:w-[300px] lg:w-[280px] xl:w-[330px]
+             rounded-3xl object-cover
+             hover:scale-105 transition-transform duration-700" />
+
+      <div class="max-w-xl px-2 sm:px-6">
+        <p class="text-sm text-center lg:text-start leading-relaxed text-gray-200
+               hover:text-[#95c11e]
+               transition-colors duration-700">
+          Home to a 46-bay, multi-tier, floodlit driving range, powered by
+          Toptracer Range technology. Complimented by a practice green and
+          bunker, coffee shop and American Golf Store.
+        </p>
+      </div>
+
+      <img src="./Assests/page2-left.avif" alt="" class="w-[220px] sm:w-[300px] lg:w-[280px] xl:w-[330px]
+             rounded-3xl object-cover
+             hover:scale-105 transition-transform duration-700" />
+
+    </section>
+
+  </div>
+
+  <section id="page3" class="min-h-screen bg-black text-white py-20 px-6">
+
+    <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16">
+      OUR EXPERIENCES
+    </h2>
+
+    <div id="cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+      <div class="relative h-[420px] rounded-3xl overflow-hidden group cursor-pointer shadow-xl"
+        style="background-image: url('./Assests/card1.avif'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+        <div class="absolute bottom-0 p-8 translate-y-10 opacity-0
+               group-hover:translate-y-0 group-hover:opacity-100
+               transition-all duration-500 z-10">
+          <h4 class="text-2xl font-bold text-[#95c11e] mb-3">TopRacer Range</h4>
+          <p class="text-sm text-gray-200 leading-relaxed">
+            Enjoy the best golf tracking experience with modern technology.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative h-[420px] rounded-3xl overflow-hidden group cursor-pointer shadow-xl"
+        style="background-image: url('./Assests/card2.webp'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+        <div class="absolute bottom-0 p-8 translate-y-10 opacity-0
+               group-hover:translate-y-0 group-hover:opacity-100
+               transition-all duration-500 z-10">
+          <h4 class="text-2xl font-bold text-[#95c11e] mb-3">Adventure Golf</h4>
+          <p class="text-sm text-gray-200 leading-relaxed">
+            Explore exciting dinosaur-themed crazy golf courses.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative h-[420px] rounded-3xl overflow-hidden group cursor-pointer shadow-xl"
+        style="background-image: url('./Assests/card3.avif'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+        <div class="absolute bottom-0 p-8 translate-y-10 opacity-0
+               group-hover:translate-y-0 group-hover:opacity-100
+               transition-all duration-500 z-10">
+          <h4 class="text-2xl font-bold text-[#95c11e] mb-3">Golf Lessons</h4>
+          <p class="text-sm text-gray-200 leading-relaxed">
+            Learn from professional coaches and improve your skills.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="green-div" class="relative mt-24 max-w-6xl mx-auto rounded-3xl overflow-hidden">
+
+      <div class="absolute inset-0 bg-gradient-to-r from-[#95c11e] to-green-400 blur-xl opacity-60"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between
+             px-10 py-12 gap-6 text-black font-extrabold text-xl md:text-2xl text-center">
+
+        <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
+          class="w-14 hidden md:block" alt="" />
+
+        <h4 class="max-w-3xl">
+          SIGN UP FOR SIDCUP NEWS AND SPECIAL OFFERS STRAIGHT TO YOUR INBOX
+        </h4>
+
+        <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
+          class="w-14 hidden md:block" alt="" />
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <div id="page4" class="relative -z-1 min-h-[100vh] flex flex-col justify-center items-center 
+         bg-black text-white px-6 sm:px-12 lg:px-32 text-center">
+    <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
+      class="absolute top-20 left-6 sm:left-16 w-10 sm:w-14 opacity-40" />
+
+    <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
+      class="absolute bottom-10 right-6 sm:right-16 w-10 sm:w-14 opacity-40" />
+
+    <p class="max-w-4xl text-lg sm:text-2xl lg:text-3xl font-medium leading-relaxed text-gray-200">
+      Excellent couple of hours, relax and enjoy in the fun. Staff were
+      accommodating, friendly and very helpful. Café on site for
+      refreshments etc. Will keep children enterntained during the holidays.
+      Worth a visit if you haven’t been.
+    </p>
+  </div>
+
+  <!-- ================= PAGE 4 ================= -->
+  <section id="page4" class="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-20">
+    <!-- Heading -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-center mb-16">
+      What Are You Waiting For?
+    </h1>
+
+    <!-- Elements Container -->
+    <div class="flex flex-col lg:flex-row gap-10 w-full max-w-6xl justify-center items-center">
+      <!-- ================= ELEM 1 ================= -->
+      <div class="elem group relative w-full lg:w-[30%] h-[260px] rounded-3xl overflow-hidden cursor-pointer">
+        <!-- Image -->
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-toptracer-1024x683.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+          alt="" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-700" />
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+        <!-- Text -->
+        <h2
+          class="absolute inset-0 flex items-center justify-center text-2xl font-extrabold uppercase text-white group-hover:text-[#95c11e] transition duration-500">
+          Toptracer Range
+        </h2>
+      </div>
+
+      <!-- ================= ELEM 2 ================= -->
+      <div class="elem group relative w-full lg:w-[30%] h-[260px] rounded-3xl overflow-hidden cursor-pointer">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-lessons-1024x683.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+          alt="" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-700" />
+
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+        <h2
+          class="absolute inset-0 flex items-center justify-center text-2xl font-extrabold uppercase text-white group-hover:text-[#95c11e] transition duration-500">
+          Golf Lessons
+        </h2>
+      </div>
+
+      <!-- ================= ELEM 3 ================= -->
+      <div class="elem group relative w-full lg:w-[30%] h-[260px] rounded-3xl overflow-hidden cursor-pointer">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-ag-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+          alt="" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-700" />
+
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+        <h2
+          class="absolute inset-0 flex items-center justify-center text-2xl font-extrabold uppercase text-white group-hover:text-[#95c11e] transition duration-500">
+          Adventure Golf
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer" class="relative bg-gradient-to-r  -z-1 from-[#95c11e] to-green-400 text-black py-20 px-8">
+    <!-- Background Dots -->
+    <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg" alt=""
+      class="absolute top-10 left-10 w-40 opacity-30" />
+
+    <!-- Footer Content -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+      <!-- Logo -->
+      <div>
+        <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="" class="w-28" />
+      </div>
+
+      <!-- Links 1 -->
+      <div class="space-y-3 font-bold uppercase">
+        <h3 class="hover:text-white cursor-pointer duration-300">
+          Toptracer Ranges
+        </h3>
+        <h3 class="hover:text-white cursor-pointer duration-300">
+          Golf Lessons
+        </h3>
+        <h3 class="hover:text-white cursor-pointer duration-300">
+          Adventure Golf
+        </h3>
+      </div>
+
+      <!-- Links 2 -->
+      <div class="space-y-3 font-bold uppercase">
+        <h3 class="hover:text-white cursor-pointer duration-300">
+          Coffee Shop
+        </h3>
+        <h3 class="hover:text-white cursor-pointer duration-300">
+          Leagues
+        </h3>
+        <h3 class="hover:text-white cursor-pointer duration-300">
+          Contact Us
+        </h3>
+      </div>
+
+      <!-- Address -->
+      <div class="text-sm font-semibold leading-relaxed">
+        <h4>
+          A20, Sidcup Bypass <br />
+          Chislehurst <br />
+          Kent <br />
+          BR7 6RP <br /><br />
+          TEL: 0208 309 0181 <br />
+          <span class="underline cursor-pointer hover:text-white duration-300">
+            Get Directions
+          </span>
+        </h4>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    crossorigin="anonymous"></script>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

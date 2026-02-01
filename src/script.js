@@ -1,0 +1,80 @@
+
+let cursor = document.getElementById("cursor");
+let cursorBlur = document.getElementById("cursor-blur");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+    cursorBlur.style.left = e.clientX + "px";
+    cursorBlur.style.top = e.clientY + "px";
+
+});
+
+
+const menu = document.getElementById("mobile-menu");
+
+function handlemenu() {
+    menu.classList.toggle("hidden");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+gsap.to("#navbar", {
+    backgroundColor: "#000",
+    duration: 0.5,
+    height: "100px",
+
+    scrollTrigger: {
+        trigger: "#page2",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 1,
+    }
+});
+
+
+gsap.to("#hero", {
+    backgroundColor: "#000",
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#page2",
+        start: "top 80%",
+        end: "top 30%",
+
+        scrub: 2,
+    }
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+let marquee = gsap.to(".scroller-track", {
+  xPercent: -100,
+  repeat: -1,
+  duration: 30,
+  ease: "linear",
+});
+
+
+ScrollTrigger.create({
+  trigger: "#scroller",
+  start: "top bottom",
+  end: "bottom top",
+  scrub: 1,
+  onUpdate: (self) => {
+   
+    marquee.timeScale(self.direction * 1);
+  },
+});
