@@ -78,3 +78,14 @@ ScrollTrigger.create({
     marquee.timeScale(self.direction * 1);
   },
 });
+
+
+document.addEventListener("touchmove", (e) => {
+  let touch = e.touches[0];
+
+  cursor.style.left = touch.clientX + "px";
+  cursor.style.top = touch.clientY + "px";
+
+  cursorBlur.style.left = touch.clientX + "px";
+  cursorBlur.style.top = touch.clientY + "px";
+});
