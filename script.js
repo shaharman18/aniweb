@@ -11,10 +11,10 @@ document.addEventListener("mousemove", (e) => {
 });
 
 
-const menu = document.getElementById("mobile-menu");
-
 function handlemenu() {
-    menu.classList.toggle("hidden");
+  const menu = document.getElementById("mobile-menu");
+
+  menu.classList.toggle("hidden");
 }
 
 
@@ -28,6 +28,9 @@ function handlemenu() {
 
 
 
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 gsap.to("#navbar", {
@@ -57,7 +60,6 @@ gsap.to("#hero", {
 });
 
 
-gsap.registerPlugin(ScrollTrigger);
 
 
 let marquee = gsap.to(".scroller-track", {

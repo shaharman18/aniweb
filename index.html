@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -18,41 +18,28 @@
     rel="stylesheet" />
 
   <link href="./output.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
 
   <title>Golf Hero Section</title>
 </head>
 
-<body class="font-[Montserrat] w-full overflow-x-hidden">
+<body class="font-[Montserrat] overflow-x-hidden">
 
- <!-- Background Video Wrapper -->
-<div class="fixed inset-0 -z-20 overflow-hidden">
-
-  <video 
-    autoplay 
-    muted 
-    loop 
-    playsinline
-    class="w-screen h-screen object-cover">
-
-    <source src="./src/Assests/hero.mp4" type="video/mp4">
-
+  <video class="fixed top-0 left-0 w-full h-full object-cover -z-20" src="./src/Assests/hero.mp4" autoplay muted loop
+    playsinline>
   </video>
 
-</div>
-
-
-
   <div id="cursor"
-    class="w-40 h-40 hidden md:block rounded-full fixed top-5 bg-[#95c11e] left-6 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all blur-3xl duration-150 ease-out">
+    class="w-40 h-40  rounded-full fixed top-5 bg-[#95c11e] left-6 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all blur-3xl duration-150 ease-out">
   </div>
 
   <div id="cursor-blur"
-    class="w-3 h-3 hidden md:block rounded-full fixed top-5 bg-[#95c11e] left-6 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out">
+    class="w-3 h-3 rounded-full fixed top-5 bg-[#95c11e] left-6 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out">
   </div>
 
   <div class="fixed top-0 left-0 w-full h-full bg-black/60 -z-10"></div>
 
-  <header id="navbar" class=" lg:flex fixed top-0 left-0 w-full z-[99]">
+  <header id="navbar" class=" lg:flex fixed top-0 left-0 w-full z-99">
     <div class="flex justify-between items-center gap-10 px-10 py-5 uppercase text-white font-semibold">
 
       <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="Logo"
@@ -77,7 +64,7 @@
 
 
 
-  <div id="mobile-menu" class=" hidden lg:hidden px-10 py-5  fixed z-[100] min-h-[80vh] inset-0 bg-black ">
+  <div id="mobile-menu" class=" hidden lg:hidden px-10 py-5  fixed z-100 min-[80vh] inset-0 bg-black ">
     <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="Logo" class=" w-[75px]" />
     <button onclick="handlemenu()" class=" absolute top-7 right-9 text-white text-2xl">
       <i class="fa-solid fa-xmark"></i>
@@ -127,7 +114,7 @@
 
     <div id="scroller" class="relative z-50 text-transparent 
            [-webkit-text-stroke:1px_green]
-           text-6xl sm:text-7xl lg:text-9xl
+           text-4xl sm:text-7xl lg:text-9xl
            font-bold whitespace-nowrap
            pt-10 flex overflow-hidden">
 
@@ -271,8 +258,8 @@
     </p>
   </div>
 
-  <!-- ================= PAGE 5 ================= -->
-  <section id="page5" class="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-20">
+  <!-- ================= PAGE 4 ================= -->
+  <section id="page4" class="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-20">
     <!-- Heading -->
     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-center mb-16">
       What Are You Waiting For?
@@ -328,7 +315,7 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer id="footer" class="relative bg-gradient-to-r  -z-10 from-[#95c11e] to-green-400 text-black py-20 px-8">
+  <footer id="footer" class="relative bg-gradient-to-r  -z-1 from-[#95c11e] to-green-400 text-black py-20 px-8">
     <!-- Background Dots -->
     <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg" alt=""
       class="absolute top-10 left-10 w-40 opacity-30" />
