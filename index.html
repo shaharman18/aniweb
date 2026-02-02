@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8" />
@@ -24,15 +24,22 @@
 
 <body class="font-[Montserrat] w-full overflow-x-hidden">
 
+ <!-- Background Video Wrapper -->
+<div class="fixed inset-0 -z-20 overflow-hidden">
+
   <video 
-  class="fixed top-0 left-0 
-  w-screen h-screen 
-  object-cover 
-  overflow-hidden 
-  -z-20"
-  src="./src/Assests/hero.mp4"
-  autoplay muted loop playsinline>
-</video>
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    class="w-screen h-screen object-cover">
+
+    <source src="./src/Assests/hero.mp4" type="video/mp4">
+
+  </video>
+
+</div>
+
 
 
   <div id="cursor"
